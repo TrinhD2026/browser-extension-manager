@@ -13,25 +13,6 @@
     src: url('./assets/fonts/static/NotoSans-Regular.ttf');
 }
 
-:root {
-    font-family: "Noto Sans Regular";
-
-    --neutral-900: hsl(227, 75%, 14%);
-    --neutral-800: hsl(226, 25%, 17%);
-    --neutral-700: hsl(225, 23%, 24%);
-    --neutral-600: hsl(226, 11%, 37%);
-    --neutral-300: hsl(0, 0%, 78%);
-    --neutral-200: hsl(217, 61%, 90%);
-    --neutral-100: hsl(0, 0%, 93%);
-    --neutral-0: hsl(200, 60%, 99%);
-
-    --red-400: hsl(3, 86%, 64%);
-    --red-500: hsl(3, 71%, 56%);
-    --red-700: hsl(3, 77%, 44%);
-
-    --light-gradient: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
-    --dark-gradient: linear-gradient(180deg, #040918 0%, #091540 100%);
-}
 
 html {
     font-size: 16px;
@@ -45,16 +26,57 @@ html {
     margin: 0;
 }
 
+/*:root {*/
+    /*
+    /*
+    */
+
+   
+/*}*/
+
+:root {
+    --background: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+    --neutral-200: hsl(217, 61%, 90%);
+/*    --neutral-800: hsl(226, 25%, 17%);*/
+/*    --neutral-300: hsl(0, 0%, 78%);*/
+    --red-400: hsl(3, 86%, 64%);
+    --red-500: hsl(3, 71%, 56%);
+    --background-color-variant: hsl(200, 60%, 99%);
+    --text-color:  hsl(227, 75%, 14%);
+    --text-color-variant1: hsl(200, 60%, 99%);
+    --text-color-variant2: hsl(0, 0%, 78%);
+
+    --btn-active-color: hsl(3, 77%, 44%);
+    --btn-color: hsl(200, 60%, 99%);
+    --btn-2-color: hsl(200, 60%, 99%);
+    --btn-2-hover:  hsl(226, 11%, 37%);
+}
+
+.darkmode{
+    --background: linear-gradient(180deg, #040918 0%, #091540 100%);
+    --background-color-variant: hsl(226, 25%, 17%);
+    --text-color: hsl(200, 60%, 99%);
+    --text-color-variant1: hsl(227, 75%, 14%);
+
+    --btn-active-color: hsl(3, 77%, 44%);
+    --btn-color: hsl(225, 23%, 24%);
+    --btn-2-color: hsl(225, 23%, 24%);
+    --btn-2-hover:  hsl(226, 11%, 37%);
+}
+
 body {
     min-height: 100vh;
     font-family: "Noto Sans Regular", sans-serif;
-    color: var(--neutral-900);
+    color: var(--text-color);
     font-weight: 400;
-    background-image: var(--light-gradient);
+    background-image: var(--background);
     background-repeat: no-repeat;
     background-size: cover;
+    color: var(--text-color);
 }
-
+h1, h2, h3{
+    color: var(--text-color);
+}
 #root{
 }
 
@@ -76,29 +98,52 @@ img {
 
 button{
     cursor: pointer;
-    font-family: "Noto Sans Bold", sans-serif;
+    font-family: "Noto Sans Regular", sans-serif;
     font-size: 1rem;
+    color: var(--text-color);
 }
 
-.wide-btn{
-    border: 0;
+.theme-btn{
+    border: 0.1rem solid var(--neutral-200);
     height: 2.5rem;
     border-radius: 2rem;
     padding: 0.5rem 1rem;
+    background-color: var(--btn-2-color);
 }
 
-.wide-btn:hover {
-    background-color: var(--red-400);
-    color: var(--neutral-0);
-    outline: 0;
+.theme-btn:hover{
+    opacity: 0.6;
 }
 
-.wide-btn:focus {
-    background-color: var(--red-400);
-    color: var(--neutral-0);
-    outline: 0;
+.theme-btn:focus, .theme-btn:active {
+    background-color: var(--btn-active-color);
+    color: var(--text-color-variant1);
 }
 
+.wide-btn{
+    border: 0.1rem solid var(--neutral-200);
+    height: 2.5rem;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--btn-color);
+}
+
+.wide-btn:hover{
+    opacity: 0.6;
+}
+
+.wide-btn:focus, .wide-btn:active {
+    background-color: var(--btn-active-color);
+    color: var(--text-color-variant1);
+}
+
+.container__extension{
+    background-color: var(--neutral-800);
+}
+.container__extension p {
+    color: var(--text-color-variant2);
+}
+/*
 .round-btn {
     background-color: transparent;
     width: 1.5rem;
@@ -115,7 +160,7 @@ button{
 .round-btn:hover, .round-btn:focus{
     background-color: var(--red-400);
 }
-
+*/
 @media (prefers-reduced-motion: no-preference) {
   a, button {
     transition: all 0.3s ease-out;
