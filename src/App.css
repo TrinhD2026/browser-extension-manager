@@ -1,42 +1,71 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.container{
+    background: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    padding: 3rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.container.dark{
+    background: linear-gradient(180deg, #040918 0%, #091540 100%);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.theme-btn{
+    border: 0.1rem solid var(--neutral-200);
+    height: 2.5rem;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--btn-2-color);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.theme-btn:hover{
+    opacity: 0.6;
 }
 
-.card {
-  padding: 2em;
+.theme-btn:focus, .theme-btn:active {
+    background-color: var(--btn-active-color);
+    color: var(--text-color-variant1);
 }
 
-.read-the-docs {
-  color: #888;
+.wide-btn{
+    border: 0.1rem solid var(--neutral-200);
+    height: 2.5rem;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--btn-color);
+}
+
+.wide-btn:hover{
+    opacity: 0.6;
+}
+
+.filter-label{
+    border: 0.1rem solid var(--neutral-200);
+    height: 2.5rem;
+    border-radius: 2rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--btn-color);
+    cursor: pointer;
+}
+
+.filter-label:hover{
+    opacity: 0.6;
+}
+.filter-label input[type="radio"]{
+    appearance: none;
+}
+.filter-label.filter-label__selected{
+    background-color: var(--btn-active-color);
+    color: var(--text-color-variant1);
+}
+.wide-btn:focus, .wide-btn:active {
+    background-color: var(--btn-active-color);
+    color: var(--text-color-variant1);
+}
+
+.container__extension{
+    background-color: var(--background-color-variant);
+}
+.container__extension p {
+    color: var(--text-color-variant2);
 }

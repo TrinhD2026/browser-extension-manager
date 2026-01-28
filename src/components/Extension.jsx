@@ -11,7 +11,6 @@ function Extension({logo,name,description,isActive,onRemoveBtnClick=null}) {
             <p>{description}</p>
             <input type="checkbox" id="btnToggle" name="btnToggle" />
             <button ref={removeBtn} className="wide-btn" onClick={() => {
-                onRemoveBtnClick();
                 removeBtn.current.blur();
             }}>Remove</button>
         </div>
