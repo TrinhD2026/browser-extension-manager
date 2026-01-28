@@ -63,9 +63,29 @@
     color: var(--text-color-variant1);
 }
 
-.container__extension{
-    background-color: var(--background-color-variant);
+.container__header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
-.container__extension p {
-    color: var(--text-color-variant2);
+
+.container__main-content-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
 }
+
+.container__filters{
+    display: flex;
+    gap: 1rem;
+}
+
+.container__extension-list{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+

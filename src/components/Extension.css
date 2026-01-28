@@ -1,0 +1,6 @@
+.container__extension{
+    background-color: var(--background-color-variant);
+}
+.container__extension p {
+    color: var(--text-color-variant2);
+}
