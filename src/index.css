@@ -13,7 +13,6 @@
     src: url('./assets/fonts/static/NotoSans-Regular.ttf');
 }
 
-
 html {
     font-size: 16px;
 }
@@ -28,8 +27,8 @@ html {
 
 :root {
     --neutral-200: hsl(217, 61%, 90%);
-/*    --neutral-800: hsl(226, 25%, 17%);*/
-/*    --neutral-300: hsl(0, 0%, 78%);*/
+    --neutral-800: hsl(226, 25%, 17%);
+    --neutral-300: hsl(0, 0%, 78%);
     --red-400: hsl(3, 86%, 64%);
     --red-500: hsl(3, 71%, 56%);
     --background-color-variant: hsl(200, 60%, 99%);
@@ -85,6 +84,11 @@ button{
     font-size: 1rem;
     color: var(--text-color);
 }
+
+button:focus{
+    outline: 0.1rem solid var(--red-400);
+}
+
 .app-logo{
 fill: #ff6347; /* tomato red */
  
@@ -92,11 +96,13 @@ stroke: #2e8b57; /* sea green */
  
 stroke-width: 3px;
 }
+
 .container__header {
     background-color: var(--background-color-variant);
 }
+
 @media (prefers-reduced-motion: no-preference) {
-  a, button {
+  a, button, label, div {
     transition: all 0.3s ease-out;
   }
 }
