@@ -17,7 +17,7 @@
     align-items: center;
     padding: 1rem;
     border-radius: 0.5rem;
-    margin-bottom: 2rem;
+    margin: 0 auto 3rem auto;
 }
 
 .theme-btn{
@@ -59,7 +59,9 @@
     background-color: var(--btn-active-color);
     color: var(--text-color-variant1);
 }
-
+.container__main-content{
+    margin: 0 auto;
+}
 .container__main-content-header{
     display: flex;
     flex-direction: column;
@@ -79,3 +81,16 @@
     gap: 2rem;
 }
 
+@media screen and (width >= 52rem){
+    .container__header, .container__main-content{
+        max-width: 80rem;
+    }
+    .container__main-content-header{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .container__extension-list{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

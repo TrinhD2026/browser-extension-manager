@@ -1,4 +1,4 @@
-import {useState,useRef, useEffect, useMemo} from 'react';
+import {useState,useRef, useMemo} from 'react';
 import './App.css';
 import Extension from './components/Extension.jsx';
 import data from "./data.json" with {type: "json"};
@@ -9,8 +9,6 @@ function App() {
     const [themeImg,setThemeImg]=useState(theme==="dark"? "/icon-sun.svg":"/icon-moon.svg");
     const [appLogo,setAppLogo]=useState(theme==="dark"? "/logo-dark.svg":"/logo.svg");
     const [filter,setFilter]=useState("all");
-
-    const [containerClass,setContainerClass]=useState(theme==="dark" ? "container dark" : "container");
 
     const themeBtn=useRef(null);
     const allBtn=useRef(null);
@@ -37,7 +35,6 @@ function App() {
         const newThemeImg=newTheme==='light'? "/icon-moon.svg":"/icon-sun.svg";
         setThemeImg(newThemeImg);
         setTheme(newTheme);
-        setContainerClass(newTheme==='light'? "container":"container dark");
         setAppLogo(newTheme === 'light' ? '/logo.svg' : 'logo-dark.svg');
         localStorage.setItem('theme',newTheme);
         themeBtn.current.blur();
@@ -54,7 +51,7 @@ function App() {
     }
 
     return (
-        <div className={containerClass} data-theme={theme}>
+        <div className={`container ${theme === 'dark' ? 'dark': ''}`} data-theme={theme}>
             <div className="container__header">
                 <img src={appLogo} alt="application logo" className="app-logo" />
                 <button className="theme-btn" onClick={switchTheme} ref={themeBtn}>
